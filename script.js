@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
         atualizarCarrinho();
     };
 
-    const finalizarPedido = () => {
+    const finalizarPedido = () => { 
         let valid = true;
         let fieldsToValidate = [];
 
@@ -334,20 +334,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            if (!isFieldValid) {
-                el.classList.add("error");
-                valid = false;
-            } else {
-                el.classList.remove("error");
-            }
+            // if (!isFieldValid) {
+            //     el.classList.add("error");
+            //     valid = false;
+            // } else {
+            //     el.classList.remove("error");
+            // }
         });
 
-        if (!valid) {
-            alert(
-                "Por favor, preencha todos os campos obrigatórios marcados em vermelho.",
-            );
-            return;
-        }
+        // if (!valid) {
+        //     alert(
+        //         "Por favor, preencha todos os campos obrigatórios marcados em vermelho.",
+        //     );
+        //     return;
+        // }
 
         const numeroWhatsApp = "5591993907605"; 
         const itensPedido = carrinho
