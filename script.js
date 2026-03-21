@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             categoria: "Complemento", /*smartphones*/
             preco: 30,
             imagem:
-                "assets/Charque.png",
+                "assets/charque.png",
             descricao: "Charque Bovino, ótima opção para você que gosta do açaí com complemento",
         },
         {
