@@ -53,7 +53,20 @@
 .menu-letreiro-container:hover .menu-letreiro-texto {
     animation-play-state: paused;
 }
-
+ 
+/*  alerta do INDISPNIVEL */
+.before-after-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(212, 175, 55, 0.95);
+    color: var(--accent);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: var(--shadow);
 
 /* ===== HEADER ===== MIGRADO DO OUTRO SITE */
 header {
