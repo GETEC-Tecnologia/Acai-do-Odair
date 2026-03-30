@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             preco: 30,
             imagem:
                 "assets/Charque.png",
-            descricao: "Charque Bovino, ótima opção para você que gosta do açaí com complemento",
+            descricao: "charque Bovino, ótima opção para você que gosta do açaí com complemento",
         },
         {
             id: 5,
