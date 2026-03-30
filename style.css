@@ -53,20 +53,6 @@
 .menu-letreiro-container:hover .menu-letreiro-texto {
     animation-play-state: paused;
 }
- 
-/*  alerta do INDISPNIVEL */
-.before-after-badge {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(212, 175, 55, 0.95);
-    color: var(--accent);
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    box-shadow: var(--shadow);
 
 /* ===== HEADER ===== MIGRADO DO OUTRO SITE */
 header {
@@ -89,6 +75,33 @@ header {
     --white: #ffffff;
     --bg-light: #040f1a;
 }
+
+/* ....>> ESTILO DO AVISO INDISPONIVEL */
+/* .id:1 {
+    position: relative;
+    display: inline-block;
+}
+
+.id:1 img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.aviso-indisponivel {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(220, 38, 38, 0.9);
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    z-index: 2;
+} */
+
+
 
 /* 
         :root {
