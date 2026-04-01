@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 1,
             nome: "AÇAÍ MÉDIO 1 LITRO",
             categoria: "Líquidos", 
-            preco: 25,
+            preco: 20,
             imagem:
                 "assets/açai-litros.png",
             descricao: "Açaí Médio 1 Litro - Delicioso e Ótima Qualidade",
@@ -53,11 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 3,
             nome: "BACABA",
             categoria: "Líquidos", /*smartphones*/
-            preco: 20,
+            preco: 18,
             imagem:
                 "assets/Bacaba.png",
             descricao: "Bacaba boa opção para o cliente",
-            
         },
         {
             id: 4,
@@ -65,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
             categoria: "Complemento", /*smartphones*/
             preco: 30,
             imagem:
-                "assets/charque.png",
+                "assets/Charque.png",
             descricao: "Charque Bovino, ótima opção para você que gosta do açaí com complemento",
         },
         {
@@ -90,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 7,
             nome: "AÇAÍ MEIO LITRO",
             categoria: "Líquidos", /*headphones*/
-            preco: 12.50,
+            preco: 10,
             imagem:
                 "assets/açai-meio-litro.png",
             descricao: "1/2 Litro de Açaí - Porção na medida",
@@ -304,7 +303,7 @@ document.addEventListener("DOMContentLoaded", () => {
         atualizarCarrinho();
     };
 
-    const finalizarPedido = () => { 
+    const finalizarPedido = () => {
         let valid = true;
         let fieldsToValidate = [];
 
@@ -319,37 +318,37 @@ document.addEventListener("DOMContentLoaded", () => {
             fieldsToValidate = ["pickup-name", "pickup-date", "pickup-time"];
         }
 
-        // fieldsToValidate.forEach((id) => {
-        //     const el = document.getElementById(id);
-        //     let isFieldValid = el.value.trim() !== "";
+        fieldsToValidate.forEach((id) => {
+            const el = document.getElementById(id);
+            let isFieldValid = el.value.trim() !== "";
 
-        //     if (id.includes("name") && isFieldValid) {
-        //         if (
-        //             el.value
-        //                 .trim()
-        //                 .split(" ")
-        //                 .filter((word) => word).length < 2
-        //         ) {
-        //             isFieldValid = false;
-        //         }
-        //     }
+            if (id.includes("name") && isFieldValid) {
+                if (
+                    el.value
+                        .trim()
+                        .split(" ")
+                        .filter((word) => word).length < 2
+                ) {
+                    isFieldValid = false;
+                }
+            }
 
-            // if (!isFieldValid) {
-            //     el.classList.add("error");
-            //     valid = false;
-            // } else {
-            //     el.classList.remove("error");
-            // }
+            if (!isFieldValid) {
+                el.classList.add("error");
+                valid = false;
+            } else {
+                el.classList.remove("error");
+            }
         });
 
-        // if (!valid) {
-        //     alert(
-        //         "Por favor, preencha todos os campos obrigatórios marcados em vermelho.",
-        //     );
-        //     return;
-        // }
+        if (!valid) {
+            alert(
+                "Por favor, preencha todos os campos obrigatórios marcados em vermelho.",
+            );
+            return;
+        }
 
-        const numeroWhatsApp = "5591993907605"; 
+        const numeroWhatsApp = "558182362638";
         const itensPedido = carrinho
             .map((item) => `  - ${item.quantidade}x ${item.nome}`)
             .join("\n");
@@ -364,7 +363,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cupomInfo = `\n*Cupom Aplicado:* ${appliedCoupon.code} (${formatarMoeda(discountAmount)})`;
         }
         const total = subtotal - discountAmount;
-        let mensagem = `*-- NOVO PEDIDO Açaí do Odair --*\n\n*Itens:*\n${itensPedido}\n\n*Subtotal:* ${formatarMoeda(subtotal)}${cupomInfo}\n*Total:* ${formatarMoeda(total)}\n\n-------------------------\n\n`;
+        let mensagem = `*-- NOVO PEDIDO TechStore --*\n\n*Itens:*\n${itensPedido}\n\n*Subtotal:* ${formatarMoeda(subtotal)}${cupomInfo}\n*Total:* ${formatarMoeda(total)}\n\n-------------------------\n\n`;
 
         if (tipoEntrega === "delivery") {
             const nome = document.getElementById("delivery-name").value;
@@ -493,4 +492,108 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+//  VERSAO BOTAÕ LOGIM CRIADO POR IA DOLA 
+
+// Seleciona o botão da página home
+document.addEventListener('DOMContentLoaded', () => {
+  const btnMostrarLogin = document.getElementById('btnMostrarLogin');
+  const modalLogin = document.getElementById('loginModal');
+  const btnAbrirPainel = document.getElementById('btnAbrirPainel');
+  const btnEntrar = document.getElementById('btnEntrar');
+  const senhaInput = document.getElementById('senha');
+  const adminPanel = document.getElementById('admin-panel');
+  const listaProdutos = document.getElementById('lista-produtos');
+
+  // Estado inicial
+  if (btnAbrirPainel) btnAbrirPainel.style.display = 'none';
+  if (adminPanel) adminPanel.style.display = 'none';
+
+  // Mostrar modal de login
+  if (btnMostrarLogin && modalLogin) {
+    btnMostrarLogin.addEventListener('click', () => {
+      modalLogin.style.display = 'flex';
+    });
+  }
+
+  // Verificação de senha (fluxo de login)
+  const senhaCorreta = "getec12345"; // exemplo (não recomendado para produção)
+  if (btnEntrar && senhaInput && modalLogin) {
+    btnEntrar.addEventListener('click', () => {
+      const senha = senhaInput.value;
+      if (senha === senhaCorreta) {
+        modalLogin.style.display = 'none'; // esconde modal
+        if (btnAbrirPainel) btnAbrirPainel.style.display = 'inline-block'; // mostra botão
+      } else {
+        alert('Senha incorreta. Tente novamente.');
+        senhaInput.value = '';
+      }
+    });
+  }
+
+  // Abrir painel admin
+  if (btnAbrirPainel) {
+    btnAbrirPainel.addEventListener('click', abrirPainel);
+  }
+
+  // Funções do painel (seu código)
+  let produtos = [
+    { id: 1, nome: "Produto 1", preco: 10.00, quantidade: 5 },
+    { id: 2, nome: "Produto 2", preco: 20.00, quantidade: 3 },
+  ];
+
+  function abrirPainel() {
+    if (adminPanel) adminPanel.style.display = 'block';
+    listarProdutos();
+  }
+
+  function fecharPainel() {
+    if (adminPanel) adminPanel.style.display = 'none';
+  }
+
+  function listarProdutos() {
+    if (!listaProdutos) return;
+    listaProdutos.innerHTML = '';
+    produtos.forEach(prod => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${prod.nome}</td>
+        <td>R$ ${prod.preco.toFixed(2)}</td>
+        <td>${prod.quantidade}</td>
+        <td><button onclick="editarProduto(${prod.id})">Editar</button></td>
+      `;
+      listaProdutos.appendChild(tr);
+    });
+  }
+
+  // A função editarProduto depende dos seus inputs HTML existentes.
+  window.editarProduto = function(id) {
+    const produto = produtos.find(p => p.id === id);
+    if (produto) {
+      document.getElementById('produto-id').value = produto.id;
+      document.getElementById('nome-produto').value = produto.nome;
+      document.getElementById('preco-produto').value = produto.preco;
+      document.getElementById('quantidade-produto').value = produto.quantidade;
+    }
+  };
+
+  window.salvarProduto = function() {
+    const id = parseInt(document.getElementById('produto-id').value, 10);
+    const nome = document.getElementById('nome-produto').value;
+    const preco = parseFloat(document.getElementById('preco-produto').value);
+    const quantidade = parseInt(document.getElementById('quantidade-produto').value, 10);
+    const index = produtos.findIndex(p => p.id === id);
+    if (index > -1) {
+      produtos[index] = { id, nome, preco, quantidade };
+      alert('Produto atualizado!');
+      listarProdutos();
+    }
+  };
+});
+
+
+  // A função editarProduto depende dos seus inputs HTML existentes.
+  
+//  FIM DO CÓDIGO DE LOGIN DO PAINEL ADM, O RESTANTE DO CÓDIGO É DO SITE NORMAL, 
+// COM O SISTEMA DE FILTRO, CARRINHO, ENTREGA E RETIRADA, CUPOM DE DESCONTO E FINALIZAÇÃO 
+// DO PEDIDO VIA WHATSAPP
 
