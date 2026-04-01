@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 1,
             nome: "AÇAÍ MÉDIO 1 LITRO",
             categoria: "Líquidos", 
-            preco: 28,
+            preco: 25,
             imagem:
                 "assets/açai-litros.png",
             descricao: "Açaí Médio 1 Litro - Delicioso e Ótima Qualidade",
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 2,
             nome: "FARINHA DE TAPIOCA",
             categoria: "Farinhas", /*laptops*/
-            preco: 4,
+            preco: 3,
             imagem:
                 "assets/farinha-de-tapioca.png",
             descricao: "Farinha de tapioca, ótimo para uma opção com açaí",
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 3,
             nome: "BACABA",
             categoria: "Líquidos", /*smartphones*/
-            preco: 25,
+            preco: 20,
             imagem:
                 "assets/Bacaba.png",
             descricao: "Bacaba boa opção para o cliente",
@@ -63,10 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 4,
             nome: "CHARQUE BOVINO",
             categoria: "Complemento", /*smartphones*/
-            preco: 40,
+            preco: 30,
             imagem:
                 "assets/charque.png",
-            descricao: "charque Bovino, ótima opção para você que gosta do açaí com complemento",
+            descricao: "Charque Bovino, ótima opção para você que gosta do açaí com complemento",
         },
         {
             id: 5,

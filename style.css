@@ -139,6 +139,7 @@ header {
             gap: 3rem;  /* Espaçamento entre os itens do header */
             flex-wrap: wrap; /* Permite que os itens do header quebrem para a próxima linha em telas menores*/
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /*sombra leve para destacar o header do conteúdo*/
+            z-index: 1000; /*garante que o header fique acima de outros elementos*/
         }
 
         .logo {
