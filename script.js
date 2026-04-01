@@ -319,20 +319,20 @@ document.addEventListener("DOMContentLoaded", () => {
             fieldsToValidate = ["pickup-name", "pickup-date", "pickup-time"];
         }
 
-        fieldsToValidate.forEach((id) => {
-            const el = document.getElementById(id);
-            let isFieldValid = el.value.trim() !== "";
+        // fieldsToValidate.forEach((id) => {
+        //     const el = document.getElementById(id);
+        //     let isFieldValid = el.value.trim() !== "";
 
-            if (id.includes("name") && isFieldValid) {
-                if (
-                    el.value
-                        .trim()
-                        .split(" ")
-                        .filter((word) => word).length < 2
-                ) {
-                    isFieldValid = false;
-                }
-            }
+        //     if (id.includes("name") && isFieldValid) {
+        //         if (
+        //             el.value
+        //                 .trim()
+        //                 .split(" ")
+        //                 .filter((word) => word).length < 2
+        //         ) {
+        //             isFieldValid = false;
+        //         }
+        //     }
 
             // if (!isFieldValid) {
             //     el.classList.add("error");
