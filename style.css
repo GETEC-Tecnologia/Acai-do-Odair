@@ -21,10 +21,6 @@
     box-sizing: border-box;
 }
 
-/* .loginModal{
-    display: none;
-} */
-
 .maquina-card {
     width: 100px; //
     height: auto;
@@ -76,34 +72,6 @@ header {
     --bg-light: #040f1a;
 }
 
-/* ....>> ESTILO DO AVISO INDISPONIVEL */
-/* .id:1 {
-    position: relative;
-    display: inline-block;
-}
-
-.id:1 img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.aviso-indisponivel {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: rgba(220, 38, 38, 0.9);
-    color: #fff;
-    padding: 8px 12px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 6px;
-    z-index: 2;
-} */
-
-
-
-/* 
         :root {
             --primary-color: #FF6B35;
             --secondary-color: #2C3E50;
@@ -113,7 +81,7 @@ header {
             --border-color: #E9ECEF;
             --success-color: #2ecc71;
             --error-color: #e74c3c; 
-        } */
+        }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
