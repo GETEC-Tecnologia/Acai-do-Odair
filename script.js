@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 1,
             nome: "AÇAÍ MÉDIO 1 LITRO",
             categoria: "Líquidos", 
-            preco: 20,
+            preco: 24,
             imagem:
                 "assets/açai-litros.png",
             descricao: "Açaí Médio 1 Litro - Delicioso e Ótima Qualidade",
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 3,
             nome: "BACABA",
             categoria: "Líquidos", /*smartphones*/
-            preco: 18,
+            preco: 20,
             imagem:
                 "assets/Bacaba.png",
             descricao: "Bacaba boa opção para o cliente",
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             categoria: "Complemento", /*smartphones*/
             preco: 30,
             imagem:
-                "assets/Charque.png",
+                "assets/charque.png",
             descricao: "Charque Bovino, ótima opção para você que gosta do açaí com complemento",
         },
         {
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             id: 7,
             nome: "AÇAÍ MEIO LITRO",
             categoria: "Líquidos", /*headphones*/
-            preco: 10,
+            preco: 12,
             imagem:
                 "assets/açai-meio-litro.png",
             descricao: "1/2 Litro de Açaí - Porção na medida",
