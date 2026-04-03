@@ -21,6 +21,10 @@
     box-sizing: border-box;
 }
 
+/* .loginModal{
+    display: none;
+} */
+
 .maquina-card {
     width: 100px; //
     height: auto;
@@ -50,9 +54,10 @@
     animation-play-state: paused;
 }
 
+
 /* ===== HEADER ===== MIGRADO DO OUTRO SITE */
 header {
-    background: var(--secondary-color);
+    /* background: var(--secondary-color); */
     box-shadow: 0 2px 10px rgba(82, 2, 82, 0.1);
     position: fixed;
     width: 100%;  /*//lados fixos para o header ocupar toda a largura */
@@ -72,6 +77,7 @@ header {
     --bg-light: #040f1a;
 }
 
+/* 
         :root {
             --primary-color: #FF6B35;
             --secondary-color: #2C3E50;
@@ -81,7 +87,7 @@ header {
             --border-color: #E9ECEF;
             --success-color: #2ecc71;
             --error-color: #e74c3c; 
-        }
+        } */
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -107,7 +113,6 @@ header {
             gap: 3rem;  /* Espaçamento entre os itens do header */
             flex-wrap: wrap; /* Permite que os itens do header quebrem para a próxima linha em telas menores*/
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /*sombra leve para destacar o header do conteúdo*/
-            z-index: 1000; /*garante que o header fique acima de outros elementos*/
         }
 
         .logo {
@@ -2082,6 +2087,7 @@ transition:transform 0.2s, box-shadow 0.2s;
           background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
           position: fixed;
           top: 0;
+          z-index: -1;
       }
 
       /* FIM DO CÓDIGO CAIXA VÍDEO */

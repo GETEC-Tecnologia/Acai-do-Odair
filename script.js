@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             imagem:
                 "assets/Bacaba.png",
             descricao: "Bacaba boa opção para o cliente",
+            
         },
         {
             id: 4,
@@ -64,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
             categoria: "Complemento", /*smartphones*/
             preco: 30,
             imagem:
-                "assets/charque.png",
+                "assets/Charque.png",
             descricao: "Charque Bovino, ótima opção para você que gosta do açaí com complemento",
         },
         {
@@ -303,7 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
         atualizarCarrinho();
     };
 
-    const finalizarPedido = () => {
+    const finalizarPedido = () => { 
         let valid = true;
         let fieldsToValidate = [];
 
@@ -333,22 +334,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            if (!isFieldValid) {
-                el.classList.add("error");
-                valid = false;
-            } else {
-                el.classList.remove("error");
-            }
+            // if (!isFieldValid) {
+            //     el.classList.add("error");
+            //     valid = false;
+            // } else {
+            //     el.classList.remove("error");
+            // }
         });
 
-        if (!valid) {
-            alert(
-                "Por favor, preencha todos os campos obrigatórios marcados em vermelho.",
-            );
-            return;
-        }
+        // if (!valid) {
+        //     alert(
+        //         "Por favor, preencha todos os campos obrigatórios marcados em vermelho.",
+        //     );
+        //     return;
+        // }
 
-        const numeroWhatsApp = "558182362638";
+        const numeroWhatsApp = "5591993907605"; 
         const itensPedido = carrinho
             .map((item) => `  - ${item.quantidade}x ${item.nome}`)
             .join("\n");
@@ -363,7 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cupomInfo = `\n*Cupom Aplicado:* ${appliedCoupon.code} (${formatarMoeda(discountAmount)})`;
         }
         const total = subtotal - discountAmount;
-        let mensagem = `*-- NOVO PEDIDO TechStore --*\n\n*Itens:*\n${itensPedido}\n\n*Subtotal:* ${formatarMoeda(subtotal)}${cupomInfo}\n*Total:* ${formatarMoeda(total)}\n\n-------------------------\n\n`;
+        let mensagem = `*-- NOVO PEDIDO Açaí do Odair --*\n\n*Itens:*\n${itensPedido}\n\n*Subtotal:* ${formatarMoeda(subtotal)}${cupomInfo}\n*Total:* ${formatarMoeda(total)}\n\n-------------------------\n\n`;
 
         if (tipoEntrega === "delivery") {
             const nome = document.getElementById("delivery-name").value;
@@ -530,7 +531,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Abrir painel admin
+//   // Abrir painel admin
   if (btnAbrirPainel) {
     btnAbrirPainel.addEventListener('click', abrirPainel);
   }
@@ -596,4 +597,9 @@ document.addEventListener('DOMContentLoaded', () => {
 //  FIM DO CÓDIGO DE LOGIN DO PAINEL ADM, O RESTANTE DO CÓDIGO É DO SITE NORMAL, 
 // COM O SISTEMA DE FILTRO, CARRINHO, ENTREGA E RETIRADA, CUPOM DE DESCONTO E FINALIZAÇÃO 
 // DO PEDIDO VIA WHATSAPP
+
+// sw.js
+self.addEventListener('install', (e) => {
+  console.log('Service Worker: Instalado');
+});
 
